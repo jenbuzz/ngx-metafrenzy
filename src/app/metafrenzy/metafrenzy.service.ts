@@ -65,6 +65,16 @@ export class MetafrenzyService {
                 return renderer.setAttribute(link, property, tag[property]);
             });
 
+            let currentHeadLinks = head.getElementsByTagName('link');
+            for (let i=0; i<currentHeadLinks.length; i++) {
+                if (currentHeadLinks[i].getAttribute('name') === link.getAttribute('name') 
+                    || currentHeadLinks[i].getAttribute('rel') === link.getAttribute('rel')) {
+
+                    currentHeadLinks[i].remove();
+                    continue;
+                }
+            }
+
             renderer.appendChild(head, link);
         } catch(e) {}
     }
