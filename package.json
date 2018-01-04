@@ -2,6 +2,10 @@
   "name": "ngx-metafrenzy",
   "version": "1.1.0",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dan-lyn/ngx-metafrenzy"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
