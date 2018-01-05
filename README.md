@@ -2,6 +2,10 @@
 
 This angular library will provide help in dynamically setting the head tags (meta/link/title).
 
+## Requirements
+
+- Angular 5+
+
 ## Installation
 
 ``npm install --save ngx-metafrenzy``
