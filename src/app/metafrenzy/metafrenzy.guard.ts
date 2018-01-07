@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { CanActivate, CanActivateChild, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
-import { MetafrenzyService } from './metafrenzy.service';
+import { MetafrenzyService, LinkDefinition } from './metafrenzy.service';
 
 @Injectable()
 export class MetafrenzyGuard implements CanActivate, CanActivateChild {
@@ -22,10 +22,12 @@ export class MetafrenzyGuard implements CanActivate, CanActivateChild {
                     this.metafrenzyService.setTitle(value);
                 } else if (key === 'tags') {
                     value.forEach(tag => {
-                        this.metafrenzyService.setMetaTag(tag.name, tag.content);
+                        if ('name' in tag && 'content' in tag) {
+                            this.metafrenzyService.setMetaTag(tag.name, tag.content);
+                        }
                     });
                 } else if (key === 'links') {
-                    value.forEach(link => {
+                    value.forEach((link: LinkDefinition) => {
                         this.metafrenzyService.setLinkTag(link);
                     });
                 }
