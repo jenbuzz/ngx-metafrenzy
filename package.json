@@ -1,10 +1,22 @@
 {
   "name": "ngx-metafrenzy",
-  "version": "1.1.1",
+  "description": "Angular 5 module for setting head tags such as title, meta, and link.",
+  "version": "1.1.2",
   "license": "MIT",
+  "keywords": [
+    "angular",
+    "angular 5",
+    "meta",
+    "meta tags",
+    "angular service",
+    "angular guard"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/dan-lyn/ngx-metafrenzy"
+  },
+  "bugs": {
+    "url": "https://github.com/dan-lyn/ngx-metafrenzy/issues"
   },
   "scripts": {
     "ng": "ng",
