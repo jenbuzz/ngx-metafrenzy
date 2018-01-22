@@ -79,4 +79,9 @@ export class MetafrenzyService {
         } catch(e) {}
     }
 
+    setAllTitleTags (title: string) {
+        this.setTitle(title);
+        this.setMetaTag('og:title', title);
+    }
+
 }
