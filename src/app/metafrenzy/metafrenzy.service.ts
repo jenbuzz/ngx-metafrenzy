@@ -46,7 +46,7 @@ export class MetafrenzyService {
     setMetaCharsetTag(value: string) {
         this.meta.updateTag({
             charset: value
-        });
+        }, 'charset');
     }
 
     setLinkTag(tag: LinkDefinition) {
