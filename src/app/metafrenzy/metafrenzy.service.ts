@@ -79,9 +79,14 @@ export class MetafrenzyService {
         } catch(e) {}
     }
 
-    setAllTitleTags (title: string) {
+    setAllTitleTags(title: string) {
         this.setTitle(title);
         this.setMetaTag('og:title', title);
+    }
+
+    setAllDescriptionTags(description: string) {
+        this.setMetaTag('description', description);
+        this.setMetaTag('og:title', description);
     }
 
 }
