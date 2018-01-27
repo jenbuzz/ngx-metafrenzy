@@ -83,5 +83,15 @@ As shown the title can be set using setTitle and a meta tag using setMetaTag wit
 
 ``charset, crossorigin, href, hreflang, media, rel, rev, sizes, target, type``
 
+### Service class functions
+```typescript
+setTitle() // Set title tag
+setMetaTag() // Set meta tag from specified name and content
+setMetaCharsetTag() // Set the value of meta charset
+setLinkTag() // Set link tag from specified object
+setAllTitleTags() // Set title tag and og:title to the same value
+setAllDescriptionTags() // Set meta description and og:description to the same value
+```
+
 ## Credits
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.1.
