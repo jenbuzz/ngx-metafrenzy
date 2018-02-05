@@ -4,8 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
-import { MetafrenzyModule } from './metafrenzy/metafrenzy.module';
-import { MetafrenzyGuard } from './metafrenzy/metafrenzy.guard';
+import { MetafrenzyModule, MetafrenzyGuard } from './metafrenzy';
 
 @NgModule({
     declarations: [AppComponent],
