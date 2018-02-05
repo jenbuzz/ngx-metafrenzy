@@ -94,4 +94,4 @@ setAllDescriptionTags() // Set meta description and og:description to the same v
 ```
 
 ## Credits
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.7.
