@@ -15,8 +15,7 @@ This angular library will provide help in dynamically setting the head tags (met
 Setup the NgModule first. Always import MetafrenzyModule. Import MetafrenzyGuard if you want to use the guard functionality. See the data section in the example below for more on the syntax.
 
 ```typescript
-import { MetafrenzyModule } from './metafrenzy/metafrenzy.module';
-import { MetafrenzyGuard } from './metafrenzy/metafrenzy.guard';
+import { MetafrenzyModule, MetafrenzyGuard } from './metafrenzy';
 
 @NgModule({
     declarations: [AppComponent],
