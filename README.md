@@ -15,7 +15,7 @@ This angular library will provide help in dynamically setting the head tags (met
 Setup the NgModule first. Always import MetafrenzyModule. Import MetafrenzyGuard if you want to use the guard functionality. See the data section in the example below for more on the syntax.
 
 ```typescript
-import { MetafrenzyModule, MetafrenzyGuard } from './metafrenzy';
+import { MetafrenzyModule, MetafrenzyGuard } from 'ngx-metafrenzy';
 
 @NgModule({
     declarations: [AppComponent],
@@ -58,7 +58,7 @@ import { MetafrenzyModule, MetafrenzyGuard } from './metafrenzy';
 You can use the service class MetafrenzyService in any component. See example below:
 
 ```typescript
-import { MetafrenzyService } from './metafrenzy/metafrenzy.service';
+import { MetafrenzyService } from 'ngx-metafrenzy';
 
 @Component({
     ...
