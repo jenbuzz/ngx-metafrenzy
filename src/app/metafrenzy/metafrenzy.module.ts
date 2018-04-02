@@ -7,8 +7,7 @@ import { MetafrenzyGuard } from './metafrenzy.guard';
 @NgModule({
     imports: [
         CommonModule
-    ],
-    declarations: []
+    ]
 })
 export class MetafrenzyModule {
     static forRoot(): ModuleWithProviders {

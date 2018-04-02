@@ -1,1 +1,1 @@
-export * from './app/metafrenzy';
+export * from './app/metafrenzy/index';
