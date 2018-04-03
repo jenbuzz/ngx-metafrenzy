@@ -75,6 +75,7 @@ export class AppComponent {
             href: 'http://localhost/'
         });
     }
+
 }
 ```
 
@@ -91,6 +92,3 @@ setLinkTag() // Set link tag from specified object
 setAllTitleTags() // Set title tag and og:title to the same value
 setAllDescriptionTags() // Set meta description and og:description to the same value
 ```
-
-## Credits
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.7.
