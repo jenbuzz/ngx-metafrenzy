@@ -67,8 +67,11 @@ export class MetafrenzyService {
 
             let currentHeadLinks = head.getElementsByTagName('link');
             for (let i=0; i<currentHeadLinks.length; i++) {
-                if (currentHeadLinks[i].getAttribute('name') === link.getAttribute('name') 
-                    || currentHeadLinks[i].getAttribute('rel') === link.getAttribute('rel')) {
+                if ((currentHeadLinks[i].getAttribute('name') !== null 
+                        && currentHeadLinks[i].getAttribute('name') === link.getAttribute('name')) 
+                    || (currentHeadLinks[i].getAttribute('rel') !== null 
+                        && currentHeadLinks[i].getAttribute('rel') === link.getAttribute('rel') 
+                        && link.getAttribute('rel') != 'stylesheet')) {
 
                     currentHeadLinks[i].remove();
                     continue;
