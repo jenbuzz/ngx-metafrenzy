@@ -3,7 +3,7 @@ import { MetafrenzyService } from './metafrenzy/metafrenzy.service';
 
 @Component({
     selector: 'app-root',
-    template: ``,
+    template: `<button [routerLink]="['/']">Start</button> <button [routerLink]="['/home']">Home</button>`,
 })
 export class AppComponent {
 
