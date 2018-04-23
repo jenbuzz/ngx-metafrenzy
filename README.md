@@ -1,6 +1,6 @@
 # ngx-metafrenzy
 
-This angular library will provide help in dynamically setting the head tags (meta/link/title).
+This angular module will provide help in dynamically setting the head-tags such as meta/link/title.
 
 ## Requirements
 
