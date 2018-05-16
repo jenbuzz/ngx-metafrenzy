@@ -29,6 +29,10 @@ export class MetafrenzyService {
         this.title.setTitle(title);
     }
 
+    getTitle(): string {
+        return this.title.getTitle();
+    }
+
     setMetaTag(name: string, content: string) {
         let metaDefinition = {};
 

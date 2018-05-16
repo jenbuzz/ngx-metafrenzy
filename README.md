@@ -86,6 +86,7 @@ As shown the title can be set using setTitle and a meta tag using setMetaTag wit
 ### Service class functions
 ```typescript
 setTitle() // Set title tag
+getTitle() // Returns the current title as a string
 setMetaTag() // Set meta tag from specified name and content
 setMetaCharsetTag() // Set the value of meta charset
 setLinkTag() // Set link tag from specified object
