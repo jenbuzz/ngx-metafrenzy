@@ -17,6 +17,6 @@ export class MetafrenzyModule {
                 MetafrenzyService,
                 MetafrenzyGuard
             ]
-        }
+        };
     }
 }

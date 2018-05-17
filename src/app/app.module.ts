@@ -20,7 +20,7 @@ import { MetafrenzyModule, MetafrenzyGuard } from './metafrenzy';
                 path: 'home',
                 component: AppComponent,
                 canActivate: [MetafrenzyGuard],
-                data: { 
+                data: {
                     metafrenzy: {
                         title: 'Page 2',
                         tags: [

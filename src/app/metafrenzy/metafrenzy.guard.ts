@@ -15,8 +15,8 @@ export class MetafrenzyGuard implements CanActivate, CanActivateChild {
         const metaTags = (next && next.data && next.data.metafrenzy) ? next.data.metafrenzy : null;
 
         if (metaTags) {
-            for (let key in metaTags) {
-                let value = metaTags[key];
+            for (const key in metaTags) {
+                const value = metaTags[key];
 
                 if (key === 'title') {
                     this.metafrenzyService.setTitle(value);

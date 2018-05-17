@@ -1,7 +1,7 @@
 import { Injectable, RendererFactory2, Inject, ViewEncapsulation } from '@angular/core';
 import { Meta, Title, DOCUMENT } from '@angular/platform-browser';
 
-export declare type LinkDefinition = {
+export interface LinkDefinition {
     charset?: string;
     crossorigin?: string;
     href?: string;
@@ -13,7 +13,7 @@ export declare type LinkDefinition = {
     target?: string;
     type?: string;
     [prop: string]: string;
-};
+}
 
 @Injectable()
 export class MetafrenzyService {
@@ -34,7 +34,7 @@ export class MetafrenzyService {
     }
 
     setMetaTag(name: string, content: string) {
-        let metaDefinition = {};
+        const metaDefinition = {};
 
         if (name.lastIndexOf('og:', 0) === 0) {
             metaDefinition['property'] = name;
@@ -78,12 +78,12 @@ export class MetafrenzyService {
                 return renderer.setAttribute(link, property, tag[property]);
             });
 
-            let currentHeadLinks = head.getElementsByTagName('link');
-            for (let i=0; i<currentHeadLinks.length; i++) {
-                if ((currentHeadLinks[i].getAttribute('name') !== null 
-                        && currentHeadLinks[i].getAttribute('name') === link.getAttribute('name')) 
-                    || (currentHeadLinks[i].getAttribute('rel') !== null 
-                        && currentHeadLinks[i].getAttribute('rel') === link.getAttribute('rel') 
+            const currentHeadLinks = head.getElementsByTagName('link');
+            for (let i = 0; i < currentHeadLinks.length; i++) {
+                if ((currentHeadLinks[i].getAttribute('name') !== null
+                        && currentHeadLinks[i].getAttribute('name') === link.getAttribute('name'))
+                    || (currentHeadLinks[i].getAttribute('rel') !== null
+                        && currentHeadLinks[i].getAttribute('rel') === link.getAttribute('rel')
                         && link.getAttribute('rel') != 'stylesheet')) {
 
                     currentHeadLinks[i].remove();
@@ -92,7 +92,7 @@ export class MetafrenzyService {
             }
 
             renderer.appendChild(head, link);
-        } catch(e) {}
+        } catch (e) {}
     }
 
     setAllTitleTags(title: string) {
