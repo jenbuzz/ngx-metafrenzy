@@ -7,11 +7,14 @@ import { MetafrenzyService } from './metafrenzy/metafrenzy.service';
         <button [routerLink]="['/']">Start</button> <button [routerLink]="['/home']">Home</button>
         <br><br>
         {{ title }}
+        <br><br>
+        {{ description }}
     `,
 })
 export class AppComponent {
 
     title: string;
+    description: string;
 
     constructor(private readonly metafrenzyService: MetafrenzyService) {
         // Set the title
@@ -21,6 +24,8 @@ export class AppComponent {
 
         // Set the meta description
         this.metafrenzyService.setMetaTag('description', 'This is a demo of ngx-metafrenzy');
+
+        this.description = this.metafrenzyService.getMetaTag('name=description');
 
         // Set the open graph title
         this.metafrenzyService.setMetaTag('og:title', 'ngx-metafrenzy | App Demo');

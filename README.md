@@ -88,6 +88,7 @@ As shown the title can be set using setTitle and a meta tag using setMetaTag wit
 setTitle() // Set title tag
 getTitle() // Returns the current title as a string
 setMetaTag() // Set meta tag from specified name and content
+getMetaTag() // Returns the content value of a metatag
 setMetaCharsetTag() // Set the value of meta charset
 setLinkTag() // Set link tag from specified object
 setAllTitleTags() // Set title tag and og:title to the same value

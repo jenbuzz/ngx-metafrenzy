@@ -47,6 +47,15 @@ export class MetafrenzyService {
         this.meta.updateTag(metaDefinition);
     }
 
+    getMetaTag(selector: string): string {
+        const tag = this.meta.getTag(selector);
+        if (!tag) {
+            return;
+        }
+
+        return tag.content;
+    }
+
     setMetaCharsetTag(value: string) {
         this.meta.updateTag({
             charset: value
