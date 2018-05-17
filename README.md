@@ -4,7 +4,7 @@ This angular module will provide help in dynamically setting the head-tags such 
 
 ## Requirements
 
-- Angular 5+
+- Angular 6+
 
 ## Installation
 
