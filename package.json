@@ -13,10 +13,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dan-lyn/ngx-metafrenzy"
+    "url": "https://github.com/jenbuzz/ngx-metafrenzy"
   },
   "bugs": {
-    "url": "https://github.com/dan-lyn/ngx-metafrenzy/issues"
+    "url": "https://github.com/jenbuzz/ngx-metafrenzy/issues"
   },
   "scripts": {
     "ng": "ng",
