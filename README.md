@@ -8,7 +8,13 @@ This angular module will provide help in dynamically setting the head-tags such 
 
 ## Installation
 
-``npm install --save ngx-metafrenzy``
+```bash
+npm install ngx-metafrenzy
+```
+or
+```
+yarn add ngx-metafrenzy
+```
 
 ## Usage
 
