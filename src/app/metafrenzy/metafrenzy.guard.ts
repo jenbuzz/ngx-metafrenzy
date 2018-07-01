@@ -16,6 +16,10 @@ export class MetafrenzyGuard implements CanActivate, CanActivateChild {
 
         if (metaTags) {
             for (const key in metaTags) {
+                if (!metaTags.hasOwnProperty(key)) {
+                    continue;
+                }
+
                 const value = metaTags[key];
 
                 if (key === 'title') {
