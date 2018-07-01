@@ -1,5 +1,6 @@
 import { Injectable, RendererFactory2, Inject, ViewEncapsulation } from '@angular/core';
-import { Meta, Title, DOCUMENT } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 
 export interface LinkDefinition {
     charset?: string;
