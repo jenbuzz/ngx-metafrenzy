@@ -85,7 +85,7 @@ export class MetafrenzyService {
                         && currentHeadLinks[i].getAttribute('name') === link.getAttribute('name'))
                     || (currentHeadLinks[i].getAttribute('rel') !== null
                         && currentHeadLinks[i].getAttribute('rel') === link.getAttribute('rel')
-                        && link.getAttribute('rel') != 'stylesheet')) {
+                        && link.getAttribute('rel') !== 'stylesheet')) {
 
                     currentHeadLinks[i].remove();
                     continue;
