@@ -106,4 +106,11 @@ export class MetafrenzyService {
         this.setMetaTag('og:title', description);
     }
 
+    setCanonical(href: string) {
+        this.setLinkTag({
+            rel: 'canonical',
+            href
+        });
+    }
+
 }

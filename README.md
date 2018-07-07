@@ -99,4 +99,5 @@ setMetaCharsetTag() // Set the value of meta charset
 setLinkTag() // Set link tag from specified object
 setAllTitleTags() // Set title tag and og:title to the same value
 setAllDescriptionTags() // Set meta description and og:description to the same value
+setCanonical() // Set canonical url
 ```

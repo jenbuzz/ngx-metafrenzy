@@ -38,6 +38,8 @@ export class AppComponent {
             rel: 'canonical',
             href: 'http://localhost'
         });
+        // Or simply set the canonical with this helper function:
+        // this.metafrenzyService.setCanonical('http://localhost2');
 
         // Set the robots link
         this.metafrenzyService.setLinkTag({
