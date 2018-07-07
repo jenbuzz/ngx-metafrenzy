@@ -113,4 +113,11 @@ export class MetafrenzyService {
         });
     }
 
+    setRobots(content: string) {
+        this.setLinkTag({
+            rel: 'canonical',
+            content
+        });
+    }
+
 }

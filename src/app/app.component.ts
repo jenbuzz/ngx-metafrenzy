@@ -41,11 +41,13 @@ export class AppComponent {
         // Or simply set the canonical with this helper function:
         // this.metafrenzyService.setCanonical('http://localhost2');
 
-        // Set the robots link
+        // Set the robots tag
         this.metafrenzyService.setLinkTag({
             name: 'robots',
             content: 'noindex, nofollow'
         });
+        // Or simply set the robots tag with this helper function:
+        // this.metafrenzyService.setRobots('noindex, nofollow');
     }
 
 }
