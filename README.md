@@ -9,11 +9,11 @@ This angular module will provide help in dynamically setting the head-tags such 
 ## Installation
 
 ```bash
-npm install ngx-metafrenzy
+$ npm install ngx-metafrenzy
 ```
 or
 ```
-yarn add ngx-metafrenzy
+$ yarn add ngx-metafrenzy
 ```
 
 ## Usage
@@ -85,7 +85,7 @@ export class AppComponent {
 }
 ```
 
-As shown the title can be set using setTitle and a meta tag using setMetaTag with the content as parameters. The link tag is a little different since you pass an object to match all possible variations of attributes on the link tag:
+As shown above the title can be set using setTitle and a meta tag using setMetaTag with the content as parameters. The link tag is a little different since you pass an object to match all possible variations of attributes on the link tag. Properties in this link object could be:
 
 ``charset, crossorigin, href, hreflang, media, rel, rev, sizes, target, type``
 
