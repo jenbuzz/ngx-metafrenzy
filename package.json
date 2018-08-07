@@ -24,7 +24,6 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
     "publish": "npm publish dist",
     "build:lib": "ng-packagr -p package.json"
   },
