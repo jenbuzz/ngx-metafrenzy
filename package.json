@@ -22,7 +22,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
-    "test": "ng test",
+    "test": "ng test --watch=false",
     "lint": "ng lint",
     "publish": "npm publish dist",
     "build:lib": "ng-packagr -p package.json"
