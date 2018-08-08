@@ -1,3 +1,5 @@
+[![Build Status](https://secure.travis-ci.org/jenbuzz/ngx-metafrenzy.png?branch=master)](http://travis-ci.org/jenbuzz/ngx-metafrenzy)
+
 # ngx-metafrenzy
 
 This angular module will provide help in dynamically setting the head-tags such as meta/link/title.
