@@ -8,7 +8,7 @@ describe('MetafrenzyService', () => {
         });
         this.service = TestBed.get(MetafrenzyService);
     });
-   
+
     it('should set and get title', () => {
         const title = 'Lorem ipsum';
         this.service.setTitle(title);
