@@ -120,4 +120,10 @@ export class MetafrenzyService {
         });
     }
 
+    setOpenGraph(og: Object) {
+        Object.keys(og).forEach((name: string) => {
+            this.setMetaTag('og:' + name, og[name]);
+        });
+    }
+
 }

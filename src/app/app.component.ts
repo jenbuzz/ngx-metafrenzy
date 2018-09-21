@@ -48,6 +48,12 @@ export class AppComponent {
         });
         // Or simply set the robots tag with this helper function:
         // this.metafrenzyService.setRobots('noindex, nofollow');
+
+        // Set all open graph tags in on call
+        this.metafrenzyService.setOpenGraph({
+            type: 'website',
+            url: 'http://localhost'
+        });
     }
 
 }
