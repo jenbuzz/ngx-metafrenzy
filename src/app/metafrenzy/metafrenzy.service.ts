@@ -113,7 +113,7 @@ export class MetafrenzyService {
 
     setAllDescriptionTags(description: string) {
         this.setMetaTag('description', description);
-        this.setMetaTag('og:title', description);
+        this.setMetaTag('og:description', description);
     }
 
     setCanonical(href: string) {
