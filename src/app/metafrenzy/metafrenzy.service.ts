@@ -16,6 +16,16 @@ export interface LinkDefinition {
     [prop: string]: string;
 }
 
+export interface OpenGraph {
+    title?: string;
+    description?: string;
+    type?: string;
+    url?: string;
+    image?: string;
+    site_name?: string;
+    [prop: string]: string;
+}
+
 @Injectable()
 export class MetafrenzyService {
 
@@ -120,7 +130,7 @@ export class MetafrenzyService {
         });
     }
 
-    setOpenGraph(og: Object) {
+    setOpenGraph(og: OpenGraph) {
         Object.keys(og).forEach((name: string) => {
             this.setMetaTag('og:' + name, og[name]);
         });
