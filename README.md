@@ -93,16 +93,56 @@ As shown above the title can be set using setTitle and a meta tag using setMetaT
 
 ### Service class functions
 ```typescript
-setTitle() // Set title tag
-getTitle() // Returns the current title as a string
-setMetaTag() // Set meta tag from specified name and content
-getMetaTag() // Returns the content value of a metatag
-setMetaCharsetTag() // Set the value of meta charset
-setLinkTag() // Set link tag from specified object
-setAllTitleTags() // Set title tag and og:title to the same value
-setAllDescriptionTags() // Set meta description and og:description to the same value
-setCanonical() // Set canonical url
-setRobots() // Set robots tag
+// Set title tag
+setTitle('')
+
+// Returns the current title as a string
+getTitle()
+
+// Set meta tag from specified name and content
+setMetaTag('')
+
+// Returns the content value of a metatag matching the selector
+getMetaTag('')
+
+// Set the value of meta charset
+setMetaCharsetTag('')
+
+// Set link tag from specified object
+setLinkTag({
+    charset: '';
+    crossorigin: '';
+    href: '';
+    hreflang: '';
+    media: '';
+    rel: '';
+    rev: '';
+    sizes: '';
+    target: '';
+    type: '';
+})
+
+// Set title tag and og:title to the same value
+setAllTitleTags('')
+
+// Set meta description and og:description to the same value
+setAllDescriptionTags('')
+
+// Set canonical url
+setCanonical('')
+
+// Set robots tag
+setRobots('')
+
+// Set all open graph tags
+setOpenGraph({
+    title: '', 
+    description: '',
+    type: '',
+    url: '',
+    image: '',
+    site_name: ''
+});
 ```
 
 ## License
