@@ -21,4 +21,18 @@ describe('MetafrenzyService', () => {
         this.service.setMetaTag(name, content);
         expect(this.service.getMetaTag('name=' + name)).toBe(content);
     });
+
+    it('should set title tag and open graph title tag', () => {
+        const title = 'Lorem ipsum';
+        this.service.setAllTitleTags(title);
+        expect(this.service.getTitle()).toBe(title);
+        expect(this.service.getMetaTag('property="og:title"')).toBe(title);
+    });
+
+    it('should set description meta and open graph tags', () => {
+        const description = 'Lorem ipsum';
+        this.service.setAllDescriptionTags(description);
+        expect(this.service.getMetaTag('name=description')).toBe(description);
+        expect(this.service.getMetaTag('property="og:description"')).toBe(description);
+    });
 });
