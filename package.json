@@ -23,6 +23,7 @@
     "start": "ng serve",
     "build": "ng build --prod",
     "test": "ng test --watch=false",
+    "test:coverage": "ng test --watch=false --code-coverage && cat ./coverage/lcov.info | coveralls",
     "lint": "ng lint",
     "publish": "npm publish dist",
     "build:lib": "ng-packagr -p package.json"
@@ -60,6 +61,7 @@
     "@types/node": "~6.0.60",
     "codelyzer": "^4.0.1",
     "core-js": "^2.5.7",
+    "coveralls": "^3.0.2",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "karma": "~1.7.0",
