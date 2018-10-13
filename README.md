@@ -1,4 +1,5 @@
 [![Build Status](https://secure.travis-ci.org/jenbuzz/ngx-metafrenzy.png?branch=master)](http://travis-ci.org/jenbuzz/ngx-metafrenzy)
+[![Coverage Status](https://coveralls.io/repos/github/jenbuzz/ngx-metafrenzy/badge.svg?branch=master)](https://coveralls.io/github/jenbuzz/ngx-metafrenzy?branch=master)
 
 # ngx-metafrenzy
 
