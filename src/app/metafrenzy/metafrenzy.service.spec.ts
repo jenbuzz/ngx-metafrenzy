@@ -22,6 +22,10 @@ describe('MetafrenzyService', () => {
         expect(this.service.getMetaTag('name=' + name)).toBe(content);
     });
 
+    it('should not get meta tag', () => {
+        expect(this.service.getMetaTag('name=nope')).toBeUndefined();
+    });
+
     it('should set title tag and open graph title tag', () => {
         const title = 'Lorem ipsum';
         this.service.setAllTitleTags(title);
