@@ -26,6 +26,14 @@ export interface OpenGraph {
     [prop: string]: string;
 }
 
+export interface Tags {
+    title?: string;
+    description?: string;
+    url?: string;
+    robots?: string;
+    image?: string;
+}
+
 @Injectable()
 export class MetafrenzyService {
 
@@ -134,6 +142,29 @@ export class MetafrenzyService {
         Object.keys(og).forEach((name: string) => {
             this.setMetaTag('og:' + name, og[name]);
         });
+    }
+
+    setTags(tags: Tags) {
+        if (tags.hasOwnProperty('title') && tags.title) {
+            this.setAllTitleTags(tags.title);
+        }
+
+        if (tags.hasOwnProperty('description') && tags.description) {
+            this.setAllDescriptionTags(tags.description);
+        }
+
+        if (tags.hasOwnProperty('url') && tags.url) {
+            this.setMetaTag('og:url', tags.url);
+            this.setCanonical(tags.url);
+        }
+
+        if (tags.hasOwnProperty('image') && tags.image) {
+            this.setMetaTag('og:image:url', tags.image);
+        }
+
+        if (tags.hasOwnProperty('robots') && tags.robots) {
+            this.setRobots(tags.robots);
+        }
     }
 
 }
