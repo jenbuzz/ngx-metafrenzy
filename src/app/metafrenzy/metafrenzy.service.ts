@@ -30,9 +30,13 @@ export interface Tags {
     title?: string;
     description?: string;
     url?: string;
-    robots?: string;
+    robots?: Robots;
     image?: string;
 }
+
+type Robots = 
+    'index,follow' | 'index,nofollow' | 'noindex,nofollow' | 'noindex,follow' |
+    'index, follow' | 'index, nofollow' | 'noindex, nofollow' | 'noindex, follow';
 
 @Injectable()
 export class MetafrenzyService {
@@ -131,7 +135,7 @@ export class MetafrenzyService {
         });
     }
 
-    setRobots(content: string) {
+    setRobots(content: Robots) {
         this.setLinkTag({
             rel: 'robots',
             content
