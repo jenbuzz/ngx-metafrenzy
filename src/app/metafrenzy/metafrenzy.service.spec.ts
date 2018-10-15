@@ -39,4 +39,30 @@ describe('MetafrenzyService', () => {
         expect(this.service.getMetaTag('name=description')).toBe(description);
         expect(this.service.getMetaTag('property="og:description"')).toBe(description);
     });
+
+    it('should set multiple tags with one call', () => {
+        const title = 'Lorem ipsum';
+        const description = 'Bla bla';
+        const url = 'http://test.test';
+        const image = 'image.jpg';
+        const robots = 'noindex,nofollow';
+
+        this.service.setTags({
+            title,
+            description,
+            url,
+            image,
+            robots
+        });
+
+        expect(this.service.getTitle()).toBe(title);
+        expect(this.service.getMetaTag('property="og:title"')).toBe(title);
+
+        expect(this.service.getMetaTag('name=description')).toBe(description);
+        expect(this.service.getMetaTag('property="og:description"')).toBe(description);
+
+        expect(this.service.getMetaTag('property="og:url"')).toBe(url);
+
+        expect(this.service.getMetaTag('property="og:image:url"')).toBe(image);
+    });
 });
