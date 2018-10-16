@@ -34,7 +34,7 @@ export interface Tags {
     image?: string;
 }
 
-type Robots =
+export type Robots =
     'index,follow' | 'index,nofollow' | 'noindex,nofollow' | 'noindex,follow' |
     'index, follow' | 'index, nofollow' | 'noindex, nofollow' | 'noindex, follow';
 
