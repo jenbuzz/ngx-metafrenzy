@@ -144,6 +144,15 @@ setOpenGraph({
     image: '',
     site_name: ''
 });
+
+// Set multiple tags with one call
+setTags({
+    title: '', // setting title and og:title
+    description: '', // setting meta description and og:description
+    url: '', // setting canonical and og:url
+    robots: '', // setting robots
+    image: '' // setting og:image:url
+});
 ```
 
 ## License
