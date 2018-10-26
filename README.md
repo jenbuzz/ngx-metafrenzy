@@ -7,7 +7,10 @@ This angular module will provide help in dynamically setting the head-tags such 
 
 ## Requirements
 
-- Angular 6+
+- Angular 7+
+
+Older versions of Angular:
+- use v2.4.1 for Angular 6
 
 ## Installation
 
