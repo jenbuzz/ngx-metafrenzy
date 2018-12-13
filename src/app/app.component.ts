@@ -34,6 +34,11 @@ export class AppComponent {
         this.metafrenzyService.setMetaTag('lorem', 'ipsum');
         this.metafrenzyService.removeMetaTag('name=lorem');
 
+        // Remove metatag with meta tag as parameter
+        this.metafrenzyService.setMetaTag('ipsum', 'lorem');
+        const ipsumMetatag = this.metafrenzyService.getMetaTag('name=ipsum');
+        this.metafrenzyService.removeMetaTag(ipsumMetatag);
+
         // Set the meta charset
         this.metafrenzyService.setMetaCharsetTag('UTF-8');
 
