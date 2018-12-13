@@ -14,7 +14,7 @@ import { MetafrenzyService } from './metafrenzy/metafrenzy.service';
 export class AppComponent {
 
     title: string;
-    description: string;
+    description: string|HTMLMetaElement;
 
     constructor(private readonly metafrenzyService: MetafrenzyService) {
         // Set the title
@@ -36,7 +36,7 @@ export class AppComponent {
 
         // Remove metatag with meta tag as parameter
         this.metafrenzyService.setMetaTag('ipsum', 'lorem');
-        const ipsumMetatag = this.metafrenzyService.getMetaTag('name=ipsum');
+        const ipsumMetatag = this.metafrenzyService.getMetaTag('name=ipsum', true);
         this.metafrenzyService.removeMetaTag(ipsumMetatag);
 
         // Set the meta charset

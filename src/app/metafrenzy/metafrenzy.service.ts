@@ -70,13 +70,13 @@ export class MetafrenzyService {
         this.meta.updateTag(metaDefinition);
     }
 
-    getMetaTag(selector: string): string {
+    getMetaTag(selector: string, returnElement?: boolean): string|HTMLMetaElement {
         const tag = this.meta.getTag(selector);
         if (!tag) {
             return;
         }
 
-        return tag.content;
+        return returnElement === true ? tag : tag.content;
     }
 
     removeMetaTag(selector: string|HTMLMetaElement) {
