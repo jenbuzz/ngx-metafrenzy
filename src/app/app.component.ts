@@ -30,6 +30,10 @@ export class AppComponent {
         // Set the open graph title
         this.metafrenzyService.setMetaTag('og:title', 'ngx-metafrenzy | App Demo');
 
+        // Set a meta tag and remove it again
+        this.metafrenzyService.setMetaTag('lorem', 'ipsum');
+        this.metafrenzyService.removeMetaTag('name=lorem');
+
         // Set the meta charset
         this.metafrenzyService.setMetaCharsetTag('UTF-8');
 

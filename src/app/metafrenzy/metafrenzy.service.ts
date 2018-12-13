@@ -79,6 +79,10 @@ export class MetafrenzyService {
         return tag.content;
     }
 
+    removeMetaTag(selector: string) {
+        this.meta.removeTag(selector);
+    }
+
     setMetaCharsetTag(value: string) {
         this.meta.updateTag({
             charset: value
