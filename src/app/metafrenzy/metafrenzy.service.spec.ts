@@ -52,7 +52,7 @@ describe('MetafrenzyService', () => {
             description,
             url,
             image,
-            robots
+            robots,
         });
 
         expect(this.service.getTitle()).toBe(title);
@@ -76,7 +76,7 @@ describe('MetafrenzyService', () => {
             description,
             url,
             image,
-            robots
+            robots,
         });
 
         expect(this.service.getMetaTag('name=description')).toBe(description);
@@ -97,7 +97,7 @@ describe('MetafrenzyService', () => {
             title,
             url,
             image,
-            robots
+            robots,
         });
 
         expect(this.service.getTitle()).toBe(title);
@@ -118,7 +118,7 @@ describe('MetafrenzyService', () => {
             title,
             description,
             image,
-            robots
+            robots,
         });
 
         expect(this.service.getTitle()).toBe(title);
@@ -140,7 +140,7 @@ describe('MetafrenzyService', () => {
             title,
             description,
             url,
-            robots
+            robots,
         });
 
         expect(this.service.getTitle()).toBe(title);
@@ -150,5 +150,29 @@ describe('MetafrenzyService', () => {
         expect(this.service.getMetaTag('property="og:description"')).toBe(description);
 
         expect(this.service.getMetaTag('property="og:url"')).toBe(url);
+    });
+
+    it('should set multiple tags except for robots with one call', () => {
+        const title = 'Lorem ipsum';
+        const description = 'Bla bla';
+        const url = 'http://test.test';
+        const image = 'image.jpg';
+
+        this.service.setTags({
+            title,
+            description,
+            url,
+            image,
+        });
+
+        expect(this.service.getTitle()).toBe(title);
+        expect(this.service.getMetaTag('property="og:title"')).toBe(title);
+
+        expect(this.service.getMetaTag('name=description')).toBe(description);
+        expect(this.service.getMetaTag('property="og:description"')).toBe(description);
+
+        expect(this.service.getMetaTag('property="og:url"')).toBe(url);
+
+        expect(this.service.getMetaTag('property="og:image:url"')).toBe(image);
     });
 });
