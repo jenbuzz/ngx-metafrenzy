@@ -45,7 +45,7 @@ export class MetafrenzyService {
         private readonly title: Title,
         private readonly meta: Meta,
         private readonly rendererFactory: RendererFactory2,
-        @Inject(DOCUMENT) private document
+        @Inject(DOCUMENT) private document: Document
     ) {}
 
     setTitle(title: string) {
@@ -93,6 +93,20 @@ export class MetafrenzyService {
         }, 'charset');
     }
 
+    removeLinkTags(shouldRemoveLinkTagCb: (linkTag: HTMLLinkElement) => boolean) {
+        const links: HTMLCollectionOf<HTMLLinkElement> = this.document.head.getElementsByTagName('link');
+
+        const toRemove: HTMLLinkElement[] = [];
+
+        for (let i = 0; i < links.length; i++) {
+            if (shouldRemoveLinkTagCb(links[i])) {
+                toRemove.push(links[i]);
+            }
+        }
+
+        toRemove.forEach(el => el.remove());
+    }
+
     setLinkTag(tag: LinkDefinition) {
         try {
             const renderer = this.rendererFactory.createRenderer(this.document, {
@@ -109,19 +123,20 @@ export class MetafrenzyService {
                 return renderer.setAttribute(link, property, tag[property]);
             });
 
-            const currentHeadLinks = head.getElementsByTagName('link');
-            for (let i = 0; i < currentHeadLinks.length; i++) {
-                if ((currentHeadLinks[i].getAttribute('name') !== null
-                        && currentHeadLinks[i].getAttribute('name') === link.getAttribute('name'))
-                    || (currentHeadLinks[i].getAttribute('rel') !== null
-                        && currentHeadLinks[i].getAttribute('rel') === link.getAttribute('rel')
-                        && link.getAttribute('rel') !== 'stylesheet'
-                        && link.getAttribute('rel') !== 'alternate')) {
-
-                    currentHeadLinks[i].remove();
-                    continue;
+            this.removeLinkTags(el => {
+                if (
+                    (el.getAttribute('name') !== null &&
+                        el.getAttribute('name') === link.getAttribute('name')) ||
+                    (el.getAttribute('rel') !== null &&
+                        el.getAttribute('rel') === link.getAttribute('rel') &&
+                        link.getAttribute('rel') !== 'stylesheet' &&
+                        link.getAttribute('rel') !== 'alternate')
+                ) {
+                  return true;
                 }
-            }
+
+                return false;
+            });
 
             renderer.appendChild(head, link);
         } catch (e) {}
@@ -142,6 +157,10 @@ export class MetafrenzyService {
             rel: 'canonical',
             href
         });
+    }
+
+    removeCanonical() {
+      this.removeLinkTags(el => el.getAttribute('rel') === 'canonical');
     }
 
     setRobots(content: Robots) {
