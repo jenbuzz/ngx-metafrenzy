@@ -45,7 +45,7 @@ export class MetafrenzyService {
         private readonly title: Title,
         private readonly meta: Meta,
         private readonly rendererFactory: RendererFactory2,
-        @Inject(DOCUMENT) private document: Document
+        @Inject(DOCUMENT) private document
     ) {}
 
     setTitle(title: string) {
