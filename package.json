@@ -36,6 +36,7 @@
   },
   "peerDependencies": {},
   "devDependencies": {
+    "@angular-devkit/build-angular": "^0.802.2",
     "@angular/cli": "^8.2.2",
     "@angular/common": "^8.2.3",
     "@angular/compiler": "^8.2.3",
@@ -69,9 +70,5 @@
     "tslint": "~5.12.1",
     "typescript": "3.5.3",
     "zone.js": "^0.9.1"
-  },
-  "dependencies": {
-    "@angular-devkit/build-angular": "^0.802.2",
-    "tslib": "^1.9.0"
   }
 }
