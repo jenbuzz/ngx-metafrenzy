@@ -69,11 +69,6 @@
           }
         }
       }
-    },
-    "ngx-metafrenzy-e2e": {
-      "root": "",
-      "sourceRoot": "",
-      "projectType": "application"
     }
   },
   "defaultProject": "ngx-metafrenzy",
