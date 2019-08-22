@@ -37,7 +37,7 @@
   "peerDependencies": {},
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.13.0",
-    "@angular/cli": "^7.3.1",
+    "@angular/cli": "^8.2.2",
     "@angular/common": "^7.2.4",
     "@angular/compiler": "^7.2.4",
     "@angular/compiler-cli": "^7.2.4",
