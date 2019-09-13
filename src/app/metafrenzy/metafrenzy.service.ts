@@ -13,7 +13,7 @@ export interface LinkDefinition {
     sizes?: string;
     target?: string;
     type?: string;
-    [prop: string]: string;
+    [prop: string]: string | undefined;
 }
 
 export interface OpenGraph {
@@ -23,7 +23,7 @@ export interface OpenGraph {
     url?: string;
     image?: string;
     site_name?: string;
-    [prop: string]: string;
+    [prop: string]: string | undefined;
 }
 
 export interface Tags {
@@ -45,7 +45,7 @@ export class MetafrenzyService {
         private readonly title: Title,
         private readonly meta: Meta,
         private readonly rendererFactory: RendererFactory2,
-        @Inject(DOCUMENT) private document
+        @Inject(DOCUMENT) private document: any
     ) {}
 
     setTitle(title: string) {
@@ -57,7 +57,7 @@ export class MetafrenzyService {
     }
 
     setMetaTag(name: string, content: string) {
-        const metaDefinition = {};
+        const metaDefinition: any = {};
 
         if (name.lastIndexOf('og:', 0) === 0) {
             metaDefinition['property'] = name;
@@ -73,7 +73,7 @@ export class MetafrenzyService {
     getMetaTag(selector: string, returnElement?: boolean): string|HTMLMetaElement {
         const tag = this.meta.getTag(selector);
         if (!tag) {
-            return;
+            return '';
         }
 
         return returnElement === true ? tag : tag.content;
@@ -120,7 +120,7 @@ export class MetafrenzyService {
             const head = this.document.head;
 
             Object.keys(tag).forEach((property: string) => {
-                return renderer.setAttribute(link, property, tag[property]);
+                return renderer.setAttribute(link, property, String(tag[property]));
             });
 
             this.removeLinkTags(el => {
@@ -172,7 +172,7 @@ export class MetafrenzyService {
 
     setOpenGraph(og: OpenGraph) {
         Object.keys(og).forEach((name: string) => {
-            this.setMetaTag('og:' + name, og[name]);
+            this.setMetaTag('og:' + name, String(og[name]));
         });
     }
 

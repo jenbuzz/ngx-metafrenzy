@@ -25,7 +25,7 @@ export class MetafrenzyGuard implements CanActivate, CanActivateChild {
                 if (key === 'title') {
                     this.metafrenzyService.setTitle(value);
                 } else if (key === 'tags') {
-                    value.forEach(tag => {
+                    value.forEach((tag: any) => {
                         if ('name' in tag && 'content' in tag) {
                             this.metafrenzyService.setMetaTag(tag.name, tag.content);
                         }
