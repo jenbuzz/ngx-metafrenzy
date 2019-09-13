@@ -23,7 +23,7 @@ describe('MetafrenzyService', () => {
     });
 
     it('should not get meta tag', () => {
-        expect(this.service.getMetaTag('name=nope')).toBeUndefined();
+        expect(this.service.getMetaTag('name=nope')).toBe('');
     });
 
     it('should set title tag and open graph title tag', () => {
