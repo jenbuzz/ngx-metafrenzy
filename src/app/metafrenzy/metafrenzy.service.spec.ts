@@ -6,7 +6,7 @@ describe('MetafrenzyService', () => {
         TestBed.configureTestingModule({
             providers: [MetafrenzyService]
         });
-        this.service = TestBed.get(MetafrenzyService);
+        this.service = TestBed.inject(MetafrenzyService);
     });
 
     it('should set and get title', () => {
