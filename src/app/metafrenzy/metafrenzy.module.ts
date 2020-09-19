@@ -10,7 +10,7 @@ import { MetafrenzyGuard } from './metafrenzy.guard';
     ]
 })
 export class MetafrenzyModule {
-    static forRoot(): ModuleWithProviders {
+    static forRoot(): ModuleWithProviders<MetafrenzyModule> {
         return {
             ngModule: MetafrenzyModule,
             providers: [
