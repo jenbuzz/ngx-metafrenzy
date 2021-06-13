@@ -1,7 +1,7 @@
 {
   "name": "ngx-metafrenzy",
   "description": "Angular 12 module for setting head tags such as title, meta, and link.",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "license": "MIT",
   "keywords": [
     "angular",
