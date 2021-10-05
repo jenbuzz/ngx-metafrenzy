@@ -70,6 +70,13 @@ import { MetafrenzyModule, MetafrenzyGuard } from 'ngx-metafrenzy';
 })
 ```
 
+When navigating between routes you can also add "canDeactivate" to the data object. This will try to reset the metatags, which were set in the previous route. Use this with caution as you might remove tags, which should be global or not removed. See remove-functions in the service class to remove single tags.
+```
+...
+    canDeactivate: [MetafrenzyGuard],
+...
+```
+
 You can use the service class MetafrenzyService in any component. See example below:
 
 ```typescript
@@ -112,6 +119,9 @@ setMetaTag('')
 // Returns the content value of a metatag matching the selector
 getMetaTag('')
 
+// Remove a single meta tag (eg. removeMetaTag('name="test"'))
+removeMetaTag('')
+
 // Set the value of meta charset
 setMetaCharsetTag('')
 
@@ -128,6 +138,9 @@ setLinkTag({
     target: '';
     type: '';
 })
+
+// Remove link tags
+removeLinkTags(() => true);
 
 // Set title tag and og:title to the same value
 setAllTitleTags('')

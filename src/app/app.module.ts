@@ -14,12 +14,14 @@ import { MetafrenzyModule, MetafrenzyGuard } from './metafrenzy';
         RouterModule.forRoot([
     {
         path: '',
-        component: AppComponent
+        component: AppComponent,
+        canActivate: [MetafrenzyGuard],
     },
     {
         path: 'home',
         component: AppComponent,
         canActivate: [MetafrenzyGuard],
+        canDeactivate: [MetafrenzyGuard],
         data: {
             metafrenzy: {
                 title: 'Page 2',
