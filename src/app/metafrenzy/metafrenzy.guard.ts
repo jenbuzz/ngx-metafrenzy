@@ -83,7 +83,7 @@ export class MetafrenzyGuard implements CanActivate, CanActivateChild {
                             ) {
                               return true;
                             }
-            
+
                             return false;
                         });
                     });
