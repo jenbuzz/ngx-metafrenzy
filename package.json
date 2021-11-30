@@ -25,7 +25,7 @@
     "test": "ng test --watch=false",
     "test:coverage": "ng test --watch=false --browsers=ChromeHeadless --code-coverage && cat ./coverage/lcov.info | coveralls",
     "lint": "ng lint",
-    "publish": "npm publish dist",
+    "publish": "cd dist && npm publish",
     "build:lib": "ng-packagr -p package.json"
   },
   "$schema": "./node_modules/ng-packagr/package.schema.json",
