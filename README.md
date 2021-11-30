@@ -6,9 +6,10 @@ This angular module will provide help in dynamically setting the head-tags such 
 
 ## Requirements
 
-- Angular 12+
+- Angular 13+
 
 Older versions of Angular:
+- use v7.0.0 for Angular 12
 - use v6.0.0 for Angular 10
 - use v5.1.0 for Angular 9
 - use v4.1.0 for Angular 8
@@ -185,4 +186,5 @@ $ docker-compose up --build -d
 And go to http://localhost:4200
 
 ## License
+
 This package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
