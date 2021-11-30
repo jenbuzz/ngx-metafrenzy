@@ -7,6 +7,7 @@ dist.tgz
 /node_modules
 
 # misc
+/.angular/cache
 /coverage
 npm-debug.log
 
